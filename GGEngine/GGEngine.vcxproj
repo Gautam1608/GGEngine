@@ -11,10 +11,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\GGEngine\Log.cpp" />
     <ClCompile Include="src\GGEngine\Application.cpp" />
     <ClCompile Include="src\GGEngine\Core.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\GGEngine\Log.h" />
     <ClInclude Include="src\GGEngine\Application.h" />
     <ClInclude Include="src\GGEngine.h" />
     <ClInclude Include="src\GGEngine\EntryPoint.h" />
@@ -67,6 +69,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);GG_PLATFORM_WINDOWS;GG_BUILD_DLL</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)GGEngine\vendor\spdlog\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -82,6 +85,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);GG_PLATFORM_WINDOWS;GG_BUILD_DLL</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)GGEngine\vendor\spdlog\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

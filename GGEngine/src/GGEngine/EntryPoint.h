@@ -6,7 +6,10 @@ extern GGENGINE::Application* GGENGINE::CreateApplication();
 
 int main(int argc, char** argv) {
 
-	printf("GGENGINE initialized");
+	GGENGINE::Log::Init();
+
+	GG_CORE_INFO("Initialized Logs!");
+
 	auto app = GGENGINE::CreateApplication();
 	app->Run();
 	delete app;
